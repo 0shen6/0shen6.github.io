@@ -1,0 +1,107 @@
+/* Design tokens. Dark is the default; light applies via the OS preference
+   (unless the user picked a theme) or via [data-theme="light"] on <html>. */
+
+:root {
+  color-scheme: dark;
+
+  /* Palette: dark ("terminal") */
+  --c-bg: #0b0f14;
+  --c-bg-alt: #10161d;
+  --c-surface: #141b24;
+  --c-surface-2: #1b2430;
+  --c-border: #263241;
+  --c-text: #d7e0ea;
+  --c-text-muted: #8b9aab;
+  --c-accent: #39d98a;          /* phosphor green */
+  --c-accent-strong: #5cf0a5;
+  --c-accent-contrast: #04140b; /* text on accent */
+  --c-accent-2: #f5b942;        /* amber */
+  --c-danger: #ff6b6b;
+  --c-grid: rgb(57 217 138 / 0.06);
+  --c-focus: #f5b942;
+  --c-shadow: rgb(0 0 0 / 0.45);
+
+  /* Type */
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", "Cascadia Code", "Consolas",
+    "Liberation Mono", Menlo, monospace;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  --fs-xl: clamp(1.5rem, 1.25rem + 1.2vw, 2.125rem);
+  --fs-2xl: clamp(2rem, 1.5rem + 2.6vw, 3.5rem);
+
+  --lh-tight: 1.15;
+  --lh-base: 1.6;
+
+  /* Spacing (4px pixel grid) */
+  --px: 4px;
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4rem;
+  --sp-9: 6rem;
+
+  /* Shape & motion */
+  --radius-sm: 2px;
+  --radius: 4px;
+  --border-w: 2px;
+  --shadow-pixel: 4px 4px 0 var(--c-shadow);
+  --dur-fast: 120ms;
+  --dur: 200ms;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  /* Layout */
+  --container: 72rem;
+  --gutter: clamp(1rem, 0.6rem + 2vw, 2rem);
+  --header-h: 3.75rem;
+}
+
+/* Light palette, shared by both triggers below. */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    color-scheme: light;
+    --c-bg: #f6f4ee;
+    --c-bg-alt: #efece3;
+    --c-surface: #ffffff;
+    --c-surface-2: #f1efe8;
+    --c-border: #d6d1c4;
+    --c-text: #1a1f26;
+    --c-text-muted: #5a6573;
+    --c-accent: #0a7445;
+    --c-accent-strong: #07552f;
+    --c-accent-contrast: #ffffff;
+    --c-accent-2: #8a5200;
+    --c-danger: #c0392b;
+    --c-grid: rgb(15 138 82 / 0.07);
+    --c-focus: #8a5200;
+    --c-shadow: rgb(26 31 38 / 0.18);
+  }
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --c-bg: #f6f4ee;
+  --c-bg-alt: #efece3;
+  --c-surface: #ffffff;
+  --c-surface-2: #f1efe8;
+  --c-border: #d6d1c4;
+  --c-text: #1a1f26;
+  --c-text-muted: #5a6573;
+  --c-accent: #0a7445;
+  --c-accent-strong: #07552f;
+  --c-accent-contrast: #ffffff;
+  --c-accent-2: #8a5200;
+  --c-danger: #c0392b;
+  --c-grid: rgb(15 138 82 / 0.07);
+  --c-focus: #8a5200;
+  --c-shadow: rgb(26 31 38 / 0.18);
+}

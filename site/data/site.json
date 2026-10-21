@@ -1,0 +1,65 @@
+{
+  "profile": {
+    "name": "Ömer Şen",
+    "handle": "0shen6",
+    "tagline": "C++ game dev, pixel art and multi-agent tooling.",
+    "bio": "2nd-year Computer Science student at Bilkent University.",
+    "university": "Bilkent University",
+    "degree": "B.Sc. Computer Science",
+    "year": "2nd year",
+    "avatar": "https://github.com/0shen6.png"
+  },
+  "links": [
+    { "label": "GitHub", "url": "https://github.com/0shen6", "icon": "github" }
+  ],
+  "skills": [
+    { "group": "Languages", "items": ["C++20", "Java"] },
+    { "group": "Libraries & testing", "items": ["raylib", "doctest"] },
+    { "group": "Build & tooling", "items": ["CMake", "Ninja", "MSYS2 (UCRT64)", "Git"] }
+  ],
+  "projects": [
+    {
+      "slug": "flagd",
+      "title": "Flagd",
+      "summary": "A pixel-art minesweeper roguelite in C++20 and raylib, where the numbers show nearby monster power.",
+      "description": "Flagd turns minesweeper into a roguelite: every number shows the total power of the monsters around it. Runs span 3 acts with bosses on a Slay-the-Spire-style map. Boards change the rules with wrap-around edges, hex grids, fog and lying numbers. A no-guess solver keeps every board fair.",
+      "tech": ["C++20", "raylib 5.5", "CMake", "Ninja", "doctest", "MSYS2 UCRT64"],
+      "repo": "https://github.com/0shen6/Flagd",
+      "page": "projects/flagd.html",
+      "featured": true,
+      "highlights": [
+        "3 acts with bosses and a Slay-the-Spire-style branching map",
+        "Board twists: wrap-around, hex, fog and liars",
+        "4 classes, 9 items and 19 relics, plus meta-progression",
+        "No-guess board solver",
+        "Unit tests with doctest; CMake + Ninja build via MSYS2 UCRT64",
+        "Art: Kenney 1-Bit Pack (CC0)"
+      ]
+    },
+    {
+      "slug": "cs102-git-tutorial",
+      "title": "CS102-Git-Tutorial",
+      "summary": "A Java coursework fork used to learn the Git and GitHub pull-request workflow.",
+      "description": "A fork of the CS102 Git tutorial coursework repository, used to practice branching, committing and opening pull requests against the upstream sinansonlu/CS102-Git-Tutorial.",
+      "tech": ["Java", "Git"],
+      "repo": "https://github.com/sinansonlu/CS102-Git-Tutorial",
+      "repoNote": "Upstream repository the PRs target. TODO: add the fork URL once confirmed.",
+      "featured": false,
+      "highlights": [
+        "Pull requests to sinansonlu/CS102-Git-Tutorial",
+        "Practice with branches, commits and code review"
+      ]
+    }
+  ],
+  "hive": {
+    "summary": "Hive is a multi-agent coding fleet: several AI coding agents plan, lease files, build, review and integrate work together under one orchestrator.",
+    "role": "Tester",
+    "contributions": [
+      {
+        "title": "Testing Hive",
+        "description": "Tested Hive, a multi-agent coding fleet, as a user of the tool."
+      }
+    ]
+  },
+  "updated": "2026-10-21"
+}

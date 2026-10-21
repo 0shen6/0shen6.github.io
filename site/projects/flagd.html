@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flagd · Ömer Şen</title>
+  <meta name="description" content="Flagd: a C++20/raylib pixel-art minesweeper roguelite by Ömer Şen, where the numbers show nearby monster power.">
+  <meta name="author" content="Ömer Şen">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#0b0f14">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://0shen6.github.io/projects/flagd.html">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://0shen6.github.io/projects/flagd.html">
+  <meta property="og:site_name" content="Ömer Şen">
+  <meta property="og:title" content="Flagd · a minesweeper roguelite">
+  <meta property="og:description" content="A C++20/raylib pixel-art minesweeper roguelite where the numbers show nearby monster power.">
+  <meta property="og:image" content="https://0shen6.github.io/assets/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ömer Şen portfolio card">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Flagd · a minesweeper roguelite">
+  <meta name="twitter:description" content="A C++20/raylib pixel-art minesweeper roguelite where the numbers show nearby monster power.">
+  <meta name="twitter:image" content="https://0shen6.github.io/assets/og-image.png">
+  <script>
+    // Apply a stored theme before first paint to avoid a flash.
+    (function () {
+      var root = document.documentElement;
+      root.classList.add("js");
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "light" || t === "dark") root.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <script type="module" src="../js/theme.js"></script>
+  <script type="module" src="../js/nav.js"></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="../index.html" aria-label="Ömer Şen, home">
+        <img class="brand__mark" src="../assets/favicon.svg" alt="" width="24" height="24">
+        <span><span class="brand__prompt">~/</span>0shen6</span>
+      </a>
+
+      <button class="btn btn--ghost btn--icon nav-toggle" type="button" data-nav-toggle
+              aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
+        <svg viewBox="0 0 16 16" aria-hidden="true" shape-rendering="crispEdges" fill="currentColor">
+          <rect x="2" y="3" width="12" height="2"/><rect x="2" y="7" width="12" height="2"/><rect x="2" y="11" width="12" height="2"/>
+        </svg>
+      </button>
+
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <ul class="nav__list" role="list">
+          <li><a class="nav__link" href="../index.html#about">about</a></li>
+          <li><a class="nav__link" href="../index.html#projects" aria-current="true">projects</a></li>
+          <li><a class="nav__link" href="../index.html#hive">hive</a></li>
+          <li><a class="nav__link" href="../index.html#skills">skills</a></li>
+          <li><a class="nav__link" href="../index.html#contact">contact</a></li>
+        </ul>
+      </nav>
+      <button class="btn btn--ghost btn--icon theme-toggle" type="button" data-theme-toggle
+              aria-label="Toggle color theme" title="Toggle color theme">
+        <svg class="theme-toggle__icon icon-sun" viewBox="0 0 16 16" aria-hidden="true" shape-rendering="crispEdges" fill="currentColor">
+          <rect x="6" y="5" width="4" height="6"/><rect x="5" y="6" width="6" height="4"/>
+          <rect x="7" y="1" width="2" height="2"/><rect x="7" y="13" width="2" height="2"/>
+          <rect x="1" y="7" width="2" height="2"/><rect x="13" y="7" width="2" height="2"/>
+          <rect x="3" y="3" width="2" height="2"/><rect x="11" y="3" width="2" height="2"/>
+          <rect x="3" y="11" width="2" height="2"/><rect x="11" y="11" width="2" height="2"/>
+        </svg>
+        <svg class="theme-toggle__icon icon-moon" viewBox="0 0 16 16" aria-hidden="true" shape-rendering="crispEdges" fill="currentColor">
+          <rect x="6" y="2" width="4" height="2"/><rect x="4" y="4" width="4" height="2"/>
+          <rect x="3" y="6" width="4" height="4"/><rect x="4" y="10" width="5" height="2"/>
+          <rect x="6" y="12" width="6" height="2"/><rect x="11" y="10" width="2" height="2"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="section hero" aria-labelledby="flagd-title">
+      <div class="container">
+        <p class="hero__eyebrow"><a href="../index.html#projects">projects</a> / flagd</p>
+        <h1 class="hero__title" id="flagd-title"><span class="cursor">Flagd</span></h1>
+        <p class="hero__lead">A pixel-art minesweeper roguelite in C++20 and raylib, where the numbers show nearby monster power.</p>
+        <ul class="tags case-tags" role="list">
+          <li class="tag tag--accent">C++20</li>
+          <li class="tag tag--accent">raylib 5.5</li>
+          <li class="tag tag--accent">CMake + Ninja</li>
+          <li class="tag tag--accent">MSYS2 UCRT64</li>
+          <li class="tag tag--accent">doctest</li>
+        </ul>
+        <div class="cluster hero__actions">
+          <a class="btn btn--primary" href="https://github.com/0shen6/Flagd" rel="noopener noreferrer">View on GitHub</a>
+          <a class="btn btn--ghost" href="#build">Build it</a>
+        </div>
+
+        <!-- SCREENSHOT PLACEHOLDER: replace this figure with a real, locally hosted screenshot (e.g. ../assets/flagd.png). -->
+        <figure class="shot-placeholder" aria-label="Screenshot placeholder">
+          <svg viewBox="0 0 160 90" role="img" aria-labelledby="shot-title" shape-rendering="crispEdges">
+            <title id="shot-title">Screenshot placeholder: a stylised pixel minesweeper board</title>
+            <defs>
+              <pattern id="cell" width="10" height="10" patternUnits="userSpaceOnUse">
+                <rect width="10" height="10" fill="currentColor" opacity="0.08"/>
+                <rect x="1" y="1" width="8" height="8" fill="currentColor" opacity="0.12"/>
+              </pattern>
+            </defs>
+            <rect x="40" y="10" width="80" height="70" fill="url(#cell)"/>
+            <g class="shot-placeholder__marks">
+              <rect x="61" y="31" width="8" height="8" class="shot-placeholder__accent"/>
+              <rect x="91" y="51" width="8" height="8" class="shot-placeholder__warn"/>
+              <rect x="71" y="61" width="8" height="8" class="shot-placeholder__accent"/>
+              <!-- pixel flag -->
+              <rect x="83" y="22" width="1" height="7" fill="currentColor"/>
+              <rect x="84" y="22" width="4" height="3" class="shot-placeholder__accent"/>
+            </g>
+          </svg>
+          <figcaption>[ screenshot placeholder ]</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="overview" class="section section--alt" aria-labelledby="overview-title">
+      <div class="container prose">
+        <header class="section-heading">
+          <span class="section-heading__index">01.</span>
+          <h2 class="section-heading__title" id="overview-title">Overview</h2>
+        </header>
+        <p>Flagd is a minesweeper roguelite. Instead of counting mines, each number on the board shows the total power of the monsters around it, so reading the board decides which fights you take and which you avoid.</p>
+      </div>
+    </section>
+
+    <section id="gameplay" class="section" aria-labelledby="gameplay-title">
+      <div class="container">
+        <header class="section-heading">
+          <span class="section-heading__index">02.</span>
+          <h2 class="section-heading__title" id="gameplay-title">Gameplay</h2>
+        </header>
+        <ul class="grid case-grid" role="list">
+          <li class="card">
+            <h3 class="card__title">3 acts, 3 bosses</h3>
+            <p class="card__body">A run spans three acts, each ending in a boss.</p>
+          </li>
+          <li class="card">
+            <h3 class="card__title">Branching map</h3>
+            <p class="card__body">Routes are picked on a Slay-the-Spire-style map.</p>
+          </li>
+          <li class="card">
+            <h3 class="card__title">Board twists</h3>
+            <p class="card__body">Boards change the rules:</p>
+            <ul class="tags" role="list">
+              <li class="tag tag--warn">wrap-around</li>
+              <li class="tag tag--warn">hex</li>
+              <li class="tag tag--warn">fog</li>
+              <li class="tag tag--warn">liars</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="content" class="section section--alt" aria-labelledby="content-title">
+      <div class="container">
+        <header class="section-heading">
+          <span class="section-heading__index">03.</span>
+          <h2 class="section-heading__title" id="content-title">Content</h2>
+        </header>
+        <dl class="stats">
+          <div class="stat"><dt>classes</dt><dd>4</dd></div>
+          <div class="stat"><dt>items</dt><dd>9</dd></div>
+          <div class="stat"><dt>relics</dt><dd>19</dd></div>
+          <div class="stat"><dt>meta-progression</dt><dd>✓</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="engineering" class="section" aria-labelledby="engineering-title">
+      <div class="container">
+        <header class="section-heading">
+          <span class="section-heading__index">04.</span>
+          <h2 class="section-heading__title" id="engineering-title">Engineering</h2>
+        </header>
+        <ul class="timeline" role="list">
+          <li class="timeline__item">
+            <span class="timeline__time">language</span>
+            <h3 class="timeline__title">C++20 with raylib 5.5</h3>
+          </li>
+          <li class="timeline__item">
+            <span class="timeline__time">build</span>
+            <h3 class="timeline__title">CMake + Ninja on MSYS2 UCRT64</h3>
+          </li>
+          <li class="timeline__item">
+            <span class="timeline__time">fairness</span>
+            <h3 class="timeline__title">No-guess solver</h3>
+            <p class="timeline__body">Boards are checked by a solver so they can be cleared without guessing.</p>
+          </li>
+          <li class="timeline__item">
+            <span class="timeline__time">testing</span>
+            <h3 class="timeline__title">doctest, stress and autoplay suites</h3>
+            <p class="timeline__body">Unit tests use doctest, alongside stress and autoplay test suites.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="build" class="section section--alt" aria-labelledby="build-title">
+      <div class="container">
+        <header class="section-heading">
+          <span class="section-heading__index">05.</span>
+          <h2 class="section-heading__title" id="build-title">Build</h2>
+          <p class="section-heading__sub">In an MSYS2 UCRT64 shell:</p>
+        </header>
+        <div class="terminal">
+          <div class="terminal__bar"><span>ucrt64 ~/Flagd</span></div>
+<pre class="terminal__body"><code><span class="muted"># GCC, CMake and Ninja for UCRT64</span>
+pacman -S --needed mingw-w64-ucrt-x86_64-gcc mingw-w64-ucrt-x86_64-cmake mingw-w64-ucrt-x86_64-ninja
+
+<span class="muted"># configure and build (doctest is fetched on the first configure)</span>
+cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
+cmake --build build
+
+<span class="muted"># run</span>
+./build/flagd.exe
+
+<span class="muted"># tests</span>
+ctest --test-dir build</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section id="credits" class="section" aria-labelledby="credits-title">
+      <div class="container prose">
+        <header class="section-heading">
+          <span class="section-heading__index">06.</span>
+          <h2 class="section-heading__title" id="credits-title">Credits</h2>
+        </header>
+        <p>Art: Kenney 1-Bit Pack, licensed CC0.</p>
+        <p>Source code: <a href="https://github.com/0shen6/Flagd" rel="noopener noreferrer">github.com/0shen6/Flagd</a></p>
+        <p class="hero__actions"><a class="btn" href="../index.html#projects">← Back to projects</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>© Ömer Şen</p>
+      <p><a href="https://github.com/0shen6" rel="noopener">github.com/0shen6</a></p>
+    </div>
+  </footer>
+</body>
+</html>

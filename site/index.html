@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ömer Şen · Portfolio</title>
+  <meta name="description" content="Portfolio of Ömer Şen, a 2nd-year Computer Science student at Bilkent University: projects, skills and contributions.">
+  <meta name="author" content="Ömer Şen">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#0b0f14">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <!-- Canonical and social-card URLs are absolute (crawlers need them); the site
+       is served from https://0shen6.github.io/. Internal links stay relative. -->
+  <link rel="canonical" href="https://0shen6.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://0shen6.github.io/">
+  <meta property="og:site_name" content="Ömer Şen">
+  <meta property="og:title" content="Ömer Şen · Portfolio">
+  <meta property="og:description" content="2nd-year Computer Science student at Bilkent University. Projects, skills and contributions.">
+  <meta property="og:image" content="https://0shen6.github.io/assets/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ömer Şen, 2nd-year Computer Science student at Bilkent University">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ömer Şen · Portfolio">
+  <meta name="twitter:description" content="2nd-year Computer Science student at Bilkent University. Projects, skills and contributions.">
+  <meta name="twitter:image" content="https://0shen6.github.io/assets/og-image.png">
+  <script>
+    // Apply a stored theme before first paint to avoid a flash.
+    (function () {
+      var root = document.documentElement;
+      root.classList.add("js");
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "light" || t === "dark") root.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="#top" aria-label="Ömer Şen, back to top">
+        <img class="brand__mark" src="assets/favicon.svg" alt="" width="24" height="24">
+        <span><span class="brand__prompt">~/</span>0shen6</span>
+      </a>
+
+      <button class="btn btn--ghost btn--icon nav-toggle" type="button" data-nav-toggle
+              aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
+        <svg viewBox="0 0 16 16" aria-hidden="true" shape-rendering="crispEdges" fill="currentColor">
+          <rect x="2" y="3" width="12" height="2"/><rect x="2" y="7" width="12" height="2"/><rect x="2" y="11" width="12" height="2"/>
+        </svg>
+      </button>
+
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <ul class="nav__list" role="list">
+          <li><a class="nav__link" href="#about">about</a></li>
+          <li><a class="nav__link" href="#projects">projects</a></li>
+          <li><a class="nav__link" href="#hive">hive</a></li>
+          <li><a class="nav__link" href="#skills">skills</a></li>
+          <li><a class="nav__link" href="#contact">contact</a></li>
+        </ul>
+      </nav>
+      <button class="btn btn--ghost btn--icon theme-toggle" type="button" data-theme-toggle
+              aria-label="Toggle color theme" title="Toggle color theme">
+        <svg class="theme-toggle__icon icon-sun" viewBox="0 0 16 16" aria-hidden="true" shape-rendering="crispEdges" fill="currentColor">
+          <rect x="6" y="5" width="4" height="6"/><rect x="5" y="6" width="6" height="4"/>
+          <rect x="7" y="1" width="2" height="2"/><rect x="7" y="13" width="2" height="2"/>
+          <rect x="1" y="7" width="2" height="2"/><rect x="13" y="7" width="2" height="2"/>
+          <rect x="3" y="3" width="2" height="2"/><rect x="11" y="3" width="2" height="2"/>
+          <rect x="3" y="11" width="2" height="2"/><rect x="11" y="11" width="2" height="2"/>
+        </svg>
+        <svg class="theme-toggle__icon icon-moon" viewBox="0 0 16 16" aria-hidden="true" shape-rendering="crispEdges" fill="currentColor">
+          <rect x="6" y="2" width="4" height="2"/><rect x="4" y="4" width="4" height="2"/>
+          <rect x="3" y="6" width="4" height="4"/><rect x="4" y="10" width="5" height="2"/>
+          <rect x="6" y="12" width="6" height="2"/><rect x="11" y="10" width="2" height="2"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section id="about" class="section hero" aria-labelledby="about-title">
+      <div class="container">
+        <div data-render="hero"></div>
+        <div data-fallback>
+          <p class="hero__eyebrow">whoami</p>
+          <h1 class="hero__title" id="about-title"><span class="cursor">Ömer Şen</span></h1>
+          <p class="hero__lead">2nd-year Computer Science student at Bilkent University.</p>
+          <div class="cluster hero__actions">
+            <a class="btn btn--primary" href="#projects">View projects</a>
+            <a class="btn" href="https://github.com/0shen6" rel="noopener">GitHub</a>
+          </div>
+        </div>
+        <div class="about-wrap" data-render="about"></div>
+      </div>
+    </section>
+
+    <section id="projects" class="section section--alt" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section-heading">
+          <span class="section-heading__index">01.</span>
+          <h2 class="section-heading__title" id="projects-title">Projects</h2>
+        </header>
+        <div data-render="projects"></div>
+        <div data-fallback>
+          <p class="muted">Projects by Ömer Şen are on <a href="https://github.com/0shen6" rel="noopener">GitHub</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="hive" class="section" aria-labelledby="hive-title">
+      <div class="container">
+        <header class="section-heading">
+          <span class="section-heading__index">02.</span>
+          <h2 class="section-heading__title" id="hive-title">Hive</h2>
+        </header>
+        <div data-render="hive"></div>
+        <div data-fallback>
+          <p class="muted">Ömer Şen tested Hive, a multi-agent coding fleet, as a user of the tool. See <a href="https://github.com/0shen6" rel="noopener">GitHub</a> for details.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section section--alt" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section-heading">
+          <span class="section-heading__index">03.</span>
+          <h2 class="section-heading__title" id="skills-title">Skills</h2>
+        </header>
+        <div data-render="skills"></div>
+        <div data-fallback>
+          <p class="muted">2nd-year Computer Science student at Bilkent University. Code is on <a href="https://github.com/0shen6" rel="noopener">GitHub</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section-heading">
+          <span class="section-heading__index">04.</span>
+          <h2 class="section-heading__title" id="contact-title">Contact</h2>
+        </header>
+        <div data-render="contact"></div>
+        <div data-fallback>
+          <p class="muted">The best way to reach Ömer Şen is through GitHub.</p>
+          <p class="hero__actions"><a class="btn btn--primary" href="https://github.com/0shen6" rel="noopener">github.com/0shen6</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>© Ömer Şen</p>
+      <p><a href="https://github.com/0shen6" rel="noopener">github.com/0shen6</a></p>
+    </div>
+  </footer>
+</body>
+</html>

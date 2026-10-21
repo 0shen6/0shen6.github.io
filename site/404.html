@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 · Page not found · Ömer Şen</title>
+  <meta name="description" content="Page not found. Head back to Ömer Şen's portfolio.">
+  <meta name="robots" content="noindex">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#0b0f14">
+  <!--
+    Self-contained on purpose: GitHub Pages serves this file for any missing
+    path, including nested ones like /foo/bar, where relative css/ and assets/
+    URLs would not resolve. So the styles, favicon, logo and theme toggle are
+    all inline, and the script at the end of <body> points the home links at
+    the real site root (the repo subpath on project Pages). Keep the CSS below
+    in step with css/tokens.css, base.css and components.css.
+  -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' shape-rendering='crispEdges'%3E%3Crect width='16' height='16' rx='2' fill='%230b0f14'/%3E%3Crect x='4' y='2' width='2' height='12' fill='%23d7e0ea'/%3E%3Crect x='6' y='2' width='6' height='2' fill='%2339d98a'/%3E%3Crect x='6' y='4' width='7' height='2' fill='%2339d98a'/%3E%3Crect x='6' y='6' width='6' height='2' fill='%2339d98a'/%3E%3Crect x='2' y='13' width='6' height='1' fill='%238b9aab'/%3E%3C/svg%3E">
+  <meta property="og:title" content="Page not found · Ömer Şen">
+  <script>
+    // Apply a stored theme before first paint to avoid a flash.
+    (function () {
+      var root = document.documentElement;
+      root.classList.add("js");
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "light" || t === "dark") root.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+  <style>
+    :root {
+      color-scheme: dark;
+      --c-bg: #0b0f14;
+      --c-surface: #141b24;
+      --c-surface-2: #1b2430;
+      --c-border: #263241;
+      --c-text: #d7e0ea;
+      --c-text-muted: #8b9aab;
+      --c-accent: #39d98a;
+      --c-accent-strong: #5cf0a5;
+      --c-accent-contrast: #04140b;
+      --c-accent-2: #f5b942;
+      --c-danger: #ff6b6b;
+      --c-grid: rgb(57 217 138 / 0.06);
+      --c-focus: #f5b942;
+      --c-shadow: rgb(0 0 0 / 0.45);
+      --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      --font-mono: ui-monospace, "SFMono-Regular", "Cascadia Code", "Consolas", "Liberation Mono", Menlo, monospace;
+      --fs-xs: 0.75rem;
+      --fs-sm: 0.875rem;
+      --fs-2xl: clamp(2rem, 1.5rem + 2.6vw, 3.5rem);
+      --sp-2: 0.5rem;
+      --sp-3: 0.75rem;
+      --sp-4: 1rem;
+      --sp-5: 1.5rem;
+      --sp-6: 2rem;
+      --sp-7: 3rem;
+      --sp-9: 6rem;
+      --radius: 4px;
+      --border-w: 2px;
+      --shadow-pixel: 4px 4px 0 var(--c-shadow);
+      --dur-fast: 120ms;
+      --dur: 200ms;
+      --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+      --container: 72rem;
+      --gutter: clamp(1rem, 0.6rem + 2vw, 2rem);
+      --header-h: 3.75rem;
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root:not([data-theme="dark"]) {
+        color-scheme: light;
+        --c-bg: #f6f4ee;
+        --c-surface: #ffffff;
+        --c-surface-2: #f1efe8;
+        --c-border: #d6d1c4;
+        --c-text: #1a1f26;
+        --c-text-muted: #5a6573;
+        --c-accent: #0a7445;
+        --c-accent-strong: #07552f;
+        --c-accent-contrast: #ffffff;
+        --c-accent-2: #8a5200;
+        --c-danger: #c0392b;
+        --c-grid: rgb(15 138 82 / 0.07);
+        --c-focus: #8a5200;
+        --c-shadow: rgb(26 31 38 / 0.18);
+      }
+    }
+
+    :root[data-theme="light"] {
+      color-scheme: light;
+      --c-bg: #f6f4ee;
+      --c-surface: #ffffff;
+      --c-surface-2: #f1efe8;
+      --c-border: #d6d1c4;
+      --c-text: #1a1f26;
+      --c-text-muted: #5a6573;
+      --c-accent: #0a7445;
+      --c-accent-strong: #07552f;
+      --c-accent-contrast: #ffffff;
+      --c-accent-2: #8a5200;
+      --c-danger: #c0392b;
+      --c-grid: rgb(15 138 82 / 0.07);
+      --c-focus: #8a5200;
+      --c-shadow: rgb(26 31 38 / 0.18);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    * { margin: 0; }
+
+    body {
+      min-height: 100vh;
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      color: var(--c-text);
+      background-color: var(--c-bg);
+      background-image:
+        linear-gradient(var(--c-grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--c-grid) 1px, transparent 1px);
+      background-size: 24px 24px;
+      -webkit-font-smoothing: antialiased;
+      overflow-wrap: break-word;
+    }
+
+    svg { display: block; max-width: 100%; }
+    button { font: inherit; color: inherit; cursor: pointer; }
+    h1 { font-size: var(--fs-2xl); line-height: 1.15; font-weight: 700; letter-spacing: -0.01em; }
+    a { color: var(--c-accent); text-underline-offset: 0.2em; }
+    a:hover { color: var(--c-accent-strong); }
+    code, pre, .mono { font-family: var(--font-mono); font-size: 0.95em; }
+
+    :focus { outline: none; }
+    :focus-visible { outline: var(--border-w) solid var(--c-focus); outline-offset: 3px; border-radius: 2px; }
+    main:focus, main:focus-visible { outline: none; }
+
+    .container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); }
+    .cluster { display: flex; flex-wrap: wrap; gap: var(--sp-3); align-items: center; }
+
+    .skip-link {
+      position: absolute; top: var(--sp-2); left: var(--sp-2); z-index: 100;
+      padding: var(--sp-2) var(--sp-4);
+      font-family: var(--font-mono); font-weight: 700;
+      color: var(--c-accent-contrast); background: var(--c-accent);
+      border-radius: var(--radius);
+      transform: translateY(-200%);
+      transition: transform var(--dur) var(--ease);
+    }
+    .skip-link:focus, .skip-link:focus-visible { transform: translateY(0); color: var(--c-accent-contrast); }
+
+    .site-header {
+      position: sticky; top: 0; z-index: 50;
+      background: color-mix(in srgb, var(--c-bg) 88%, transparent);
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--c-border);
+    }
+    .site-header__inner { display: flex; align-items: center; gap: var(--sp-3); min-height: var(--header-h); }
+
+    .brand {
+      display: inline-flex; align-items: center; gap: var(--sp-2);
+      margin-inline-end: auto;
+      font-family: var(--font-mono); font-weight: 700;
+      color: var(--c-text); text-decoration: none; white-space: nowrap;
+    }
+    .brand:hover { color: var(--c-accent); }
+    .brand__mark { width: 1.5rem; height: 1.5rem; }
+    .brand__prompt { color: var(--c-accent); }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: var(--sp-2);
+      min-height: 2.75rem;
+      padding: var(--sp-2) var(--sp-5);
+      font-family: var(--font-mono); font-size: var(--fs-sm); font-weight: 700; line-height: 1;
+      color: var(--c-text); text-decoration: none;
+      background: var(--c-surface);
+      border: var(--border-w) solid var(--c-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-pixel);
+      transition:
+        transform var(--dur-fast) var(--ease),
+        box-shadow var(--dur-fast) var(--ease),
+        background-color var(--dur-fast) var(--ease),
+        border-color var(--dur-fast) var(--ease);
+    }
+    .btn:hover { color: var(--c-text); border-color: var(--c-accent); transform: translate(-1px, -1px); box-shadow: 5px 5px 0 var(--c-shadow); }
+    .btn:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--c-shadow); }
+    .btn--primary { color: var(--c-accent-contrast); background: var(--c-accent); border-color: var(--c-accent); }
+    .btn--primary:hover { color: var(--c-accent-contrast); background: var(--c-accent-strong); border-color: var(--c-accent-strong); }
+    .btn--ghost { background: transparent; box-shadow: none; }
+    .btn--ghost:hover { box-shadow: none; transform: none; background: var(--c-surface); }
+    .btn--icon { min-width: 2.75rem; padding: var(--sp-2); }
+
+    /* Show the icon for the theme the button will switch to. */
+    .theme-toggle__icon { width: 1.25rem; height: 1.25rem; }
+    .theme-toggle .icon-sun { display: none; }
+    .theme-toggle .icon-moon { display: block; }
+    :root[data-theme="dark"] .theme-toggle .icon-sun,
+    :root:not([data-theme]) .theme-toggle .icon-sun { display: block; }
+    :root[data-theme="dark"] .theme-toggle .icon-moon,
+    :root:not([data-theme]) .theme-toggle .icon-moon { display: none; }
+    @media (prefers-color-scheme: light) {
+      :root:not([data-theme]) .theme-toggle .icon-sun { display: none; }
+      :root:not([data-theme]) .theme-toggle .icon-moon { display: block; }
+    }
+
+    .hero { padding-block: clamp(var(--sp-7), 10vw, var(--sp-9)); }
+    .hero__eyebrow { font-family: var(--font-mono); font-size: var(--fs-sm); color: var(--c-accent); }
+    .hero__eyebrow::before { content: "$ "; content: "$ " / ""; color: var(--c-text-muted); }
+    .hero__title { margin-block: var(--sp-3) var(--sp-4); }
+    .hero__actions { margin-block-start: var(--sp-6); }
+
+    .cursor::after {
+      content: "";
+      display: inline-block;
+      width: 0.55em; height: 1em;
+      margin-inline-start: 0.1em;
+      vertical-align: -0.12em;
+      background: var(--c-accent);
+      animation: blink 1.1s steps(1) infinite;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    .terminal {
+      overflow: hidden;
+      font-family: var(--font-mono); font-size: var(--fs-sm);
+      background: var(--c-surface);
+      border: var(--border-w) solid var(--c-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-pixel);
+    }
+    .terminal__bar {
+      display: flex; align-items: center; gap: 6px;
+      padding: var(--sp-2) var(--sp-3);
+      background: var(--c-surface-2);
+      border-bottom: 1px solid var(--c-border);
+      color: var(--c-text-muted); font-size: var(--fs-xs);
+    }
+    .terminal__bar::before {
+      content: "";
+      width: 8px; height: 8px;
+      margin-inline-end: var(--sp-2);
+      background: var(--c-danger);
+      box-shadow: 12px 0 0 var(--c-accent-2), 24px 0 0 var(--c-accent);
+    }
+    .terminal__bar span { margin-inline-start: 28px; }
+    pre.terminal__body { margin: 0; padding: var(--sp-4); overflow-x: auto; white-space: pre; line-height: 1.7; }
+
+    .not-found { min-height: calc(100vh - var(--header-h) - 6rem); display: grid; align-items: center; }
+    .not-found__code {
+      font-size: clamp(4rem, 3rem + 8vw, 9rem);
+      font-weight: 700; line-height: 1;
+      color: var(--c-accent);
+      text-shadow: 6px 6px 0 var(--c-shadow);
+    }
+    .not-found__term { max-width: 36rem; }
+
+    .site-footer {
+      padding-block: var(--sp-6);
+      border-top: 1px solid var(--c-border);
+      font-family: var(--font-mono); font-size: var(--fs-sm);
+      color: var(--c-text-muted);
+    }
+    .site-footer__inner {
+      display: flex; flex-wrap: wrap; gap: var(--sp-3) var(--sp-5);
+      align-items: center; justify-content: space-between;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .cursor::after { animation: none; }
+      .btn:hover, .btn:active { transform: none; }
+    }
+  </style>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html" data-root-link="index.html" aria-label="Ömer Şen, home">
+        <svg class="brand__mark" viewBox="0 0 16 16" width="24" height="24" aria-hidden="true" shape-rendering="crispEdges">
+          <rect width="16" height="16" rx="2" fill="#0b0f14"/>
+          <rect x="4" y="2" width="2" height="12" fill="#d7e0ea"/>
+          <rect x="6" y="2" width="6" height="2" fill="#39d98a"/>
+          <rect x="6" y="4" width="7" height="2" fill="#39d98a"/>
+          <rect x="6" y="6" width="6" height="2" fill="#39d98a"/>
+          <rect x="2" y="13" width="6" height="1" fill="#8b9aab"/>
+        </svg>
+        <span><span class="brand__prompt">~/</span>0shen6</span>
+      </a>
+
+      <button class="btn btn--ghost btn--icon theme-toggle" type="button" data-theme-toggle
+              aria-label="Toggle color theme" title="Toggle color theme">
+        <svg class="theme-toggle__icon icon-sun" viewBox="0 0 16 16" aria-hidden="true" shape-rendering="crispEdges" fill="currentColor">
+          <rect x="6" y="5" width="4" height="6"/><rect x="5" y="6" width="6" height="4"/>
+          <rect x="7" y="1" width="2" height="2"/><rect x="7" y="13" width="2" height="2"/>
+          <rect x="1" y="7" width="2" height="2"/><rect x="13" y="7" width="2" height="2"/>
+          <rect x="3" y="3" width="2" height="2"/><rect x="11" y="3" width="2" height="2"/>
+          <rect x="3" y="11" width="2" height="2"/><rect x="11" y="11" width="2" height="2"/>
+        </svg>
+        <svg class="theme-toggle__icon icon-moon" viewBox="0 0 16 16" aria-hidden="true" shape-rendering="crispEdges" fill="currentColor">
+          <rect x="6" y="2" width="4" height="2"/><rect x="4" y="4" width="4" height="2"/>
+          <rect x="3" y="6" width="4" height="4"/><rect x="4" y="10" width="5" height="2"/>
+          <rect x="6" y="12" width="6" height="2"/><rect x="11" y="10" width="2" height="2"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="section hero not-found" aria-labelledby="nf-title">
+      <div class="container">
+        <p class="hero__eyebrow">cd ./this-page</p>
+        <p class="not-found__code mono" aria-hidden="true">404</p>
+        <h1 class="hero__title" id="nf-title"><span class="cursor">Page not found</span></h1>
+        <div class="terminal not-found__term">
+          <div class="terminal__bar"><span>bash</span></div>
+<pre class="terminal__body"><code>$ cd ./this-page
+bash: cd: ./this-page: No such file or directory</code></pre>
+        </div>
+        <div class="cluster hero__actions">
+          <a class="btn btn--primary" href="index.html" data-root-link="index.html">← Back home</a>
+          <a class="btn btn--ghost" href="index.html#projects" data-root-link="index.html#projects">See projects</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>© Ömer Şen</p>
+      <p><a href="https://github.com/0shen6" rel="noopener">github.com/0shen6</a></p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var colors = { dark: "#0b0f14", light: "#f6f4ee" };
+      var media = window.matchMedia ? window.matchMedia("(prefers-color-scheme: light)") : null;
+
+      // Theme toggle (inline twin of js/theme.js, which can't be imported from an unknown depth).
+      function current() {
+        var t = root.getAttribute("data-theme");
+        if (t === "light" || t === "dark") return t;
+        return media && media.matches ? "light" : "dark";
+      }
+      function sync(theme) {
+        var next = theme === "dark" ? "light" : "dark";
+        document.querySelector('meta[name="theme-color"]').setAttribute("content", colors[theme]);
+        document.querySelectorAll("[data-theme-toggle]").forEach(function (btn) {
+          btn.setAttribute("aria-label", "Switch to " + next + " theme");
+          btn.setAttribute("title", "Switch to " + next + " theme");
+        });
+      }
+      document.querySelectorAll("[data-theme-toggle]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var theme = current() === "dark" ? "light" : "dark";
+          root.setAttribute("data-theme", theme);
+          try { localStorage.setItem("theme", theme); } catch (e) {}
+          sync(theme);
+        });
+      });
+      sync(current());
+
+      // Point home links at the site root. On project Pages (user.github.io/repo/a/b)
+      // that is the first path segment; elsewhere it is "/". The hostname can't tell
+      // a project site from a user site with a nested miss (user.github.io/a/b), so
+      // apply that guess at once, then confirm it by probing for a file only this
+      // site has, and fall back to the other candidate. The markup's relative href
+      // is the no-JS fallback.
+      if (location.protocol === "file:") return;
+      var parts = location.pathname.split("/");
+      var nested = parts.length > 2 && parts[1] ? "/" + parts[1] + "/" : null;
+      var candidates = !nested ? ["/"]
+        : /\.github\.io$/i.test(location.hostname) ? [nested, "/"] : ["/", nested];
+      function retarget(base) {
+        document.querySelectorAll("[data-root-link]").forEach(function (a) {
+          a.setAttribute("href", base + a.getAttribute("data-root-link"));
+        });
+      }
+      retarget(candidates[0]);
+      if (!window.fetch || candidates.length < 2) return;
+      (function probe(i) {
+        if (i >= candidates.length) return;
+        fetch(candidates[i] + "data/site.json", { method: "HEAD", cache: "no-store" })
+          .then(function (res) { if (res.ok) retarget(candidates[i]); else probe(i + 1); })
+          .catch(function () { probe(i + 1); });
+      })(0);
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" shape-rendering="crispEdges">
+  <title>Ömer Şen · Portfolio</title>
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#39d98a" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#0b0f14"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- pixel flag mark (same shape as favicon, 16x scale) -->
+  <g transform="translate(96 96) scale(10)">
+    <rect x="4" y="2" width="2" height="12" fill="#d7e0ea"/>
+    <rect x="6" y="2" width="6" height="2" fill="#39d98a"/>
+    <rect x="6" y="4" width="7" height="2" fill="#39d98a"/>
+    <rect x="6" y="6" width="6" height="2" fill="#39d98a"/>
+    <rect x="2" y="13" width="6" height="1" fill="#8b9aab"/>
+  </g>
+
+  <g font-family="ui-monospace, Consolas, Menlo, monospace">
+    <text x="96" y="340" font-size="36" fill="#8b9aab">$ <tspan fill="#39d98a">whoami</tspan></text>
+    <text x="96" y="430" font-size="88" font-weight="700" fill="#d7e0ea" font-family="system-ui, Segoe UI, Roboto, sans-serif">Ömer Şen</text>
+    <text x="96" y="495" font-size="32" fill="#8b9aab">2nd-year Computer Science student at Bilkent University</text>
+    <text x="96" y="560" font-size="28" fill="#f5b942">github.com/0shen6</text>
+  </g>
+
+  <!-- pixel corner -->
+  <rect x="1144" y="24" width="32" height="8" fill="#39d98a"/>
+  <rect x="1168" y="24" width="8" height="32" fill="#39d98a"/>
+</svg>
